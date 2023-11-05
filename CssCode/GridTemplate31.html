@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Areas</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            gap: 1rem;
+            background-color: rgb(65, 62, 62);
+            padding: 4rem;
+            
+            grid-template-areas: 
+             "header header header"
+             "sidebar contant1 contant1 "
+             "sidebar contant2 contant3"
+             "footer footer header"
+            ;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .itm{
+            background-color: blue;
+            border: 2px solid black;
+            padding: 1rem;
+            color: white;
+        }
+
+        #header{
+           grid-area: header;
+        }
+        #sidebar{
+          grid-area:sidebar;
+        }
+        #contant1{
+          grid-area: contant1;
+        }
+        #contant2{
+            grid-area: contant2;
+        }
+        #contant3{
+            grid-area: contant3;
+        }
+        #footer{
+           grid-area:footer ;
+        } 
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="itm" id="header">Header</div>
+        <div class="itm" id="sidebar">Sidebar</div>
+        <div class="itm" id="contant1">Contant1</div>
+        <div class="itm" id="contant2">Contant2</div>
+        <div class="itm" id="contant3">Contant3</div>
+        <div class="itm"  id="footer">Footer</div>
+       
+    </div>
+</body>
+</html>
